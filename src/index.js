@@ -5,8 +5,10 @@ import reportWebVitals from './reportWebVitals';
 
 import { ThemeProvider } from "@mui/material/styles";
 import { NewPalette } from './Palette/palette';
-
 import { createTheme } from "@mui/material/styles";
+
+import MainPage from './Pages/MainPage';
+
 const theme = createTheme({
   palette: NewPalette
   
@@ -17,6 +19,7 @@ root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <Header />
+      <MainPage />
     </ThemeProvider>
   </React.StrictMode>
 );
