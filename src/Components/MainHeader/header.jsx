@@ -2,16 +2,13 @@ import React, { useState } from 'react';
 
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import InputBase from '@mui/material/InputBase';
 import Collapse from '@mui/material/Collapse';
-
+import Box from '@mui/material/Box';
 import SearchIcon from '@mui/icons-material/Search';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
-
-
+import { InputBase } from '@mui/material';
 
 const Header = () => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -35,44 +32,52 @@ const Header = () => {
       };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" color='darkPrimary'>
       <Toolbar>
-        <IconButton
-          size="large"
-          edge="start"
-          color="inherit"
-          sx={{ mr: 2 }}
-        >
-        </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Valtieri
-        </Typography>
-        <Collapse in={isExpanded} timeout={300}>
-            <InputBase
-                variant="standard"
-                onChange={inputChange}
-                onKeyDown={handleKeyDown}
-                value = {searchInput}
-                size="small"
-                placeholder="Search"
-                inputProps={{
-                    sx: {
-                      color: 'white',
-                    },
-                  }}
+        <Button color="lightWhite" sx={{ mx: 8, my:1 }}>
+          <img
+              src="./images/ValtieriLogo-removebg-preview.png"
+              alt="Logo"
+              loading="lazy"
+              width="60" height="60"
+              style={{ filter: 'drop-shadow( 3px 4px 3px #e1ebcf)'}}
             />
-        </Collapse>
+        </Button>
+        <Box
+          sx={{
+            width: '60vw',
+            maxWidth: '100%',
+            ml: 12,
+            pl: 10,
+            flexGrow: 1
+          }}
+        >
+            <Collapse in={isExpanded} timeout={300}>
+                <InputBase 
+                    onChange={inputChange}
+                    onKeyDown={handleKeyDown}
+                    value = {searchInput}
+                    placeholder="Search"
+                    fullWidth
+                    inputProps={{
+                        sx: {
+                          color: '#f3f8f1',
+                        },
+                      }}
+                />
+            </Collapse>
+        </Box>
         <IconButton
             onClick={ handleEnter }
-            color="inherit"
+            color="lightWhite"
             sx={{ mr: 4 }}
         >
             <SearchIcon />
         </IconButton>
-        <Button color="inherit" sx={{ mx: 4 }}>Home</Button>
-        <Button color="inherit" sx={{ mx: 4 }}>Collection</Button>
-        <Button color="inherit" sx={{ mx: 4 }}>Contact</Button>
-        <IconButton color="inherit" sx={{ ml: 4, mr: 20 }}> <LocalMallIcon /> </IconButton>
+        <Button color="lightWhite" sx={{ mx: 6 }}>Home</Button>
+        <Button color="lightWhite" sx={{ mx: 6 }}>Collection</Button>
+        <Button color="lightWhite" sx={{ mx: 6 }}>Contact</Button>
+        <IconButton color="lightWhite" sx={{ ml: 4, mr: 8 }}> <LocalMallIcon /> </IconButton>
       </Toolbar>
     </AppBar>
   );

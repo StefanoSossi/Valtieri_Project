@@ -1,15 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import Header from './Components/MainHeader/header';
 import reportWebVitals from './reportWebVitals';
 
+import { ThemeProvider } from "@mui/material/styles";
+import { NewPalette } from './palette/palette';
+
+import { createTheme } from "@mui/material/styles";
+const theme = createTheme({
+  palette: NewPalette
+  
+});
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <Header />
-    <App />
+    <ThemeProvider theme={theme}>
+      <Header />
+    </ThemeProvider>
   </React.StrictMode>
 );
 
