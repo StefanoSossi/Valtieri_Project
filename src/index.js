@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Header from './Components/MainHeader/header';
 import reportWebVitals from './reportWebVitals';
 
 import { ThemeProvider } from "@mui/material/styles";
-import { NewPalette } from './palette/palette';
+import { NewPalette } from './Palette/palette';
 
 import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
