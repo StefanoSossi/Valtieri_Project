@@ -18,8 +18,14 @@ export const NewPalette = {
     main: "#6cc6b2",
     contrastText: "#616161"
   },
-  lightSecondary: {
+  lightSecondary400: {
     main: "#22be83",
+  },
+  lightSecondary200: {
+    main: "#b6f2db",
+  },
+  lightSecondary100: {
+    main: "#e7fbf3",
   }
 }
 

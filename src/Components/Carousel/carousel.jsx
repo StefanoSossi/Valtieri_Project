@@ -3,7 +3,9 @@ import Carousel from 'react-material-ui-carousel'
 import { Box,
          Grid,
          Typography,
-         Button } from '@mui/material'
+         Button } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { keyframes } from '@emotion/react';
 
 const MainCarousel = () => {
     var items = [
@@ -44,6 +46,18 @@ const MainCarousel = () => {
         },
     ]
 
+const animation = keyframes`
+  0% { background-position: 0% 50%; }
+  50% { background-position: 50% 100%; }
+  100% { background-position: 0% 50%; }
+`;
+
+const AnimatedBox = styled(Box)({
+    background: 'linear-gradient(315deg, #e7fbf3 0%, #b6a2d8 100%)',
+    backgroundSize : '400% 400%',
+    animation: `${animation} 10s ease-in-out infinite`,
+});
+
     return (
         <Carousel
             interval={10000}
@@ -55,10 +69,9 @@ const MainCarousel = () => {
         >
             {
                 items.map( (item, i) => 
-                    <Box key={i} sx={{
+                    <AnimatedBox key={i} sx={{
                         width: '100vw',
                         height: '100vh',
-                        backgroundColor: '#e1ebcf',
                     }}>
                         <Grid container direction="row" justifyContent="center" alignItems="center" height={'100vh'}>
                             <Grid item xs container>
@@ -109,7 +122,7 @@ const MainCarousel = () => {
                                 />
                             </Grid>
                         </Grid>
-                    </Box> 
+                    </AnimatedBox> 
                 )
             }
         </Carousel>
