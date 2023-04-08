@@ -4,13 +4,14 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 import { ThemeProvider } from "@mui/material/styles";
-import { NewPalette } from './Palette/palette';
+import { NewPalette, NewTypography } from './Theme/theme';
 import { createTheme } from "@mui/material/styles";
 
 import MainPage from './Pages/MainPage';
 
 const theme = createTheme({
-  palette: NewPalette
+  palette: NewPalette,
+  typography: NewTypography,
   
 });
 const root = ReactDOM.createRoot(document.getElementById('root'));

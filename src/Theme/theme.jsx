@@ -21,5 +21,10 @@ export const NewPalette = {
   lightSecondary: {
     main: "#22be83",
   }
-    
+}
+
+export const NewTypography = {
+  allVariants: {
+    fontFamily: 'helvetica',
+  },
 }
