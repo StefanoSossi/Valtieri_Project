@@ -28,25 +28,24 @@ const NewCollection = () => {
     ]
 
     return (
-        <>
-            <Typography  variant="h3" component="div" color={'#ff3333'}>
+        <Box sx={{ m: 4, p: 2, backgroundColor: '#fafafa', borderRadius: '10px'}}>
+            <Typography  variant="h3" component="div" sx={{ color: '#483c32' }} >
                 <strong>New Fashion Shoe</strong>
             </Typography>
-            <Typography  variant="h6" component="div" color={'secondary'}>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            <Typography  variant="h6" component="div" sx={{ color: '#282a2d' }} >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </Typography>
             <Box sx={{
                     display: 'flex',
                     //alignContent: 'center',
                     justifyContent: 'center',
                     my:8,
-                    backgroundColor: 'primary',
                 }}
             >
                 <NewCard items={items} ></NewCard>
                 
             </Box>
-        </>
+        </Box>
     )
 }
 

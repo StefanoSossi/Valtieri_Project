@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { styled } from '@mui/material/styles';
 import { Typography,
          Card,
-         CardMedia,
-         CardContent } from '@mui/material';
+         CardContent,
+         Button } from '@mui/material';
 
 const StyledCard = styled(Card)({
     width: '20%',
-    transition: 'transform 0.4s ease-in-out',
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    transition: 'transform 0.4s',
     '&:hover': {
         transform: 'scale(1.3)',
     },
@@ -20,34 +23,38 @@ const NewCard = ( { items } ) => {
         <>
             {
                 items.map( ( item, i ) => 
-                    <StyledCard key={i}>
+                    <StyledCard key={i} sx={{ m: 2.5}}>
                         <img 
-                            src={`${item.url}`} 
-                            alt={item.name} 
-                            style={{
-                                display: 'block',
-                                width: '100%',
-                                height: '80%',
+                            src = {`${item.url}`} 
+                            alt = {item.name} 
+                            loading = 'lazy'
+                            width= '100%'
+                            height= '80%'
+                            style = {{
                                 objectFit: 'contain',
+                                filter: 'drop-shadow( 10px 10px 3px #e1ebcf)',
                             }}
                         />
-                            <CardContent>
+                            <CardContent sx = {{ 
+                                    flexGrow: 1,
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
+                                    backgroundColor: '#fcfcfc'
+                                }}
+                            >
                                 <Typography gutterBottom variant="h5" 
-                                    sx={{
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                    }}
+                                    color = 'secondary'
                                 >
                                     {item.name}
                                 </Typography>
-                                <Typography variant="body2" color="text.secondary"
-                                    sx={{
-                                        display: 'flex',
-                                        justifyContent: 'center',
+                                <Button variant="outlined"  
+                                    sx = {{
+                                        width: '50%',
                                     }}
                                 >
-                                    Card Content
-                                </Typography>
+                                    Ver Más
+                                </Button>
                             </CardContent>
                     </StyledCard>
                 )

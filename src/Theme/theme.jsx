@@ -11,6 +11,12 @@ export const NewPalette = {
   darkWhite: {
     main: "#e1ebcf"
   },
+  white100: {
+    main: "#fcfcfc"
+  },
+  white200: {
+    main: "#fafafa"
+  },
   lightPurple: {
     main: "#b6a2d8"
   },
@@ -26,7 +32,13 @@ export const NewPalette = {
   },
   lightSecondary100: {
     main: "#e7fbf3",
-  }
+  },
+  black800: {
+    main: "#483c32",
+  },
+  black600: {
+    main: "#282a2d",
+  },
 }
 
 export const NewTypography = {
