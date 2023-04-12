@@ -39,7 +39,6 @@ export const NewPalette = {
   black600: {
     main: "#282a2d",
   },
-  }
 }
 
 export const NewTypography = {
