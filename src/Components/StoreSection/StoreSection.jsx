@@ -52,11 +52,14 @@ let items = [
 const StoreSection = () => {
 
   return (
-    <Box sx={{ m: 4, p: 2, 
-               backgroundColor: '#fafafa', 
-               borderRadius: '10px', 
+    <Box sx={{ p: 2, 
+               backgroundColor: '#1a9365', 
                display: 'flex',
-               flexDirection: 'row'
+               flexDirection: 'row',
+               flexWrap: 'wrap',
+               my:8,
+               justifyContent: 'center',
+               alignItems: 'center' 
             }}
     >
        <StoreCard items={items} ></StoreCard>

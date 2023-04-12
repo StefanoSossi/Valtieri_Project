@@ -6,12 +6,17 @@ import { Typography,
          CardContent } from '@mui/material';
 
 const StyledCard = styled(Card)({
-    width: '20%',
     display: 'flex',
     justifyContent: 'center',
     flexDirection: 'column',
+    height: '50vh',
+    width: '30vw',
+    cursor: 'pointer',
 });
 
+const hanldeClick = () => {
+    console.log('click');
+}
 
 const NewCard = ( { items } ) => {
 
@@ -19,7 +24,7 @@ const NewCard = ( { items } ) => {
         <>
             {
                 items.map( ( item, i ) => 
-                    <StyledCard key={i} sx={{ m: 0.5}}>
+                    <StyledCard key={i} sx={{ m: 0.8 }} onClick={hanldeClick}>
                         <img 
                             src = {`${item.url}`} 
                             alt = {item.name} 
