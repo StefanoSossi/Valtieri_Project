@@ -8,11 +8,9 @@ import { styled } from '@mui/material/styles';
 import { keyframes } from '@emotion/react';
 
 const Model = () => {
-    // location of the 3D model
     const gltf = useLoader(GLTFLoader, "./Model/scene.gltf");
     return (
       <>
-        {/* Use scale to control the size of the 3D model */}
         <primitive object={gltf.scene} scale={0.7} />
       </>
     );
@@ -62,7 +60,6 @@ const PromSection = () => {
                 <spotLight intensity={0.5} angle={0.1} penumbra={1} position={[10, 15, 10]} castShadow />
                 <Suspense fallback={null}>
                   <Model />
-                  {/* To add environment effect to the model */}
                   <Environment preset="city" />
                 </Suspense>
                 <OrbitControls autoRotate />
