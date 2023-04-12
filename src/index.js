@@ -7,7 +7,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { NewPalette, NewTypography } from './Theme/theme';
 import { createTheme } from "@mui/material/styles";
 
-import MainPage from './Pages/MainPage';
+import MainPage from './Pages/MainPage/MainPage';
 
 const theme = createTheme({
   palette: NewPalette,
