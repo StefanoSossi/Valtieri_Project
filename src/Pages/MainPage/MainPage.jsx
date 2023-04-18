@@ -1,6 +1,7 @@
 import React from 'react';
 import PromSection from '../../Components/PromSection/PromSection';
 import StoreSection from '../../Components/StoreSection/StoreSection';
+import BottomBar from '../../Components/BottomBar/BottomBar'
 
 const MainPage = () => {
 
@@ -8,6 +9,7 @@ const MainPage = () => {
     <>
       <PromSection></PromSection>
       <StoreSection></StoreSection>
+        <BottomBar></BottomBar>
     </>
   );
 }
