@@ -18,10 +18,10 @@ const BottomBar = () => {
                     src="./images/Valtieri-removebg-preview_waifu2x_art_noise2_scale.png"
                     alt="Logo"
                     loading="lazy"
-                    width="150%" height="200"
+                    width="200vw" height="200vh"
                 />
             </Button>
-            <Grid xs container 
+            <Grid container 
                 direction="column" 
                 spacing={1} 
                 justifyContent="center" 
@@ -48,7 +48,7 @@ const BottomBar = () => {
                     </Button>
                 </Grid>
             </Grid>
-            <Grid xs container 
+            <Grid container 
                 direction="column" 
                 spacing={1} 
                 justifyContent="center" 
@@ -70,7 +70,7 @@ const BottomBar = () => {
                     </Button>
                 </Grid>
             </Grid>
-            <Grid xs container 
+            <Grid container 
                 direction="column" 
                 spacing={1} 
                 justifyContent="center" 
@@ -92,7 +92,7 @@ const BottomBar = () => {
                     </Button>
                 </Grid>
             </Grid>
-            <Grid xs container 
+            <Grid container 
                 direction="column" 
                 spacing={1} 
                 justifyContent="center" 
@@ -105,7 +105,7 @@ const BottomBar = () => {
                     <IconButton color="lightWhite" sx={{ m: 2 }}> <InstagramIcon /> </IconButton>
                 </Grid>
             </Grid>
-            <Grid xs container 
+            <Grid container 
                 direction="column" 
                 spacing={1} 
                 justifyContent="center" 

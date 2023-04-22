@@ -32,7 +32,7 @@ const Header = () => {
       };
 
   return (
-    <AppBar position="static" color='darkPrimary'>
+    <AppBar position="static" color='lightPurple'>
       <Toolbar>
         <Button color="lightWhite" sx={{ mx: 8, my:1 }}>
           <img

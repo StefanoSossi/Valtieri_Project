@@ -23,7 +23,7 @@ const NewCard = ( { items } ) => {
         <>
             {
                 items.map( ( item, i ) => 
-                    <StyledCard key={i} sx={{ m: 2.5}}>
+                    <StyledCard key={i} sx={{ m: 2}}>
                         <img 
                             src = {`${item.url}`} 
                             alt = {item.name} 
